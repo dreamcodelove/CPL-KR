@@ -11,20 +11,13 @@
 
 #include <stdio.h>
 
-#define START 300
-#define STOP 0
-#define STEP 20
-
 int main() {
-    /* Fahrenheit = (9 / 5) * Celsius + 32 */
+    // Fahrenheit = (9 / 5) * Celsius + 32
 
-    float celsius, fahrenheit;
+    float cels;
 
-    celsius = START;
-    printf("Celsius\tFahrenheit\n");
-    while (celsius >= STOP) {
-        fahrenheit = (9.0 / 5.0) * celsius + 32;
-        printf("%3.0f\t%.1f\n", celsius, fahrenheit);
-        celsius = celsius - STEP;
+    printf("Celsius\tFahrenheit\n");  // heading
+    for (int cels = 300; cels >= 0; cels = cels - 20) {
+        printf("%3d\t%d\n", cels, (9 * cels / 5 + 32));
     }
 }
